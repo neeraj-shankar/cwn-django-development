@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<div class="container">
+  <br>
+  <button type="button" id="cwn--open-model-form-btn" class="btn btn-outline-primary">Create Post</button>
+  <br>
+  <div id="model--form-container" class="model--form-container">
+    <div class="cwn--model-form-content">
+      <span class="cwn--model-close" id="cwn--model-close">&times;</span>
+      <h2>Pop-up Form</h2>
+      <form method="post" , action="{% url 'blogger__post' %}">
+        {% csrf_token %}
+        <!-- Your form fields go here -->
+        <input type="text" name="title" id="title" class="form-control"
+          placeholder="Post Title">
+        <br>
+        <input type="text" name="category" id="category" class="form-control"
+          placeholder="Category of the post">
+        <br>
+        <input type="text" name="author" id="author" class="form-control"
+          placeholder="Author Name">
+        <br>
+        <textarea class="form-control" name="content" id="content"
+          rows="3" placeholder="Description of the post"></textarea>
+        <br><br>
+
+        <!-- Add more form fields as needed -->
+        <div class="cwn--button-container">
+          <button type="button" id="cwn--model-cancel-btn"
+            class="btn btn-outline-secondary">Cancel</button>
+          <button type="submit" id="cwn--model-submit-btn"
+            class="btn btn-outline-primary">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<br><br>
+<div class="container">
+  <div class="table-responsive">
+    <table id="table2" class="table table-bordered">
+      <thead>
+        <tr>
+          <th class="header"><span class="last-name">Title</span></th>
+          <th class="header"><span class="first-name">Content</span></th>
+          <th class="header"><span class="email">Author</span></th>
+          <th class="header"><span class="dues">Category</span></th>
+          <th class="header"><span class="dues">Publication Date</span></th>
+          <th class="header"><span class="dues">Action</span></th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for post in post_list %}
+        <tr>
+          <td class="last-name">{{post.title}}</td>
+          <td class="first-name">{{post.content}}</td>
+          <td class="email">{{post.author}}</td>
+          <td class="dues">{{post.categories.name}}</td>
+          <td class="dues">{{post.publication_date}}</td>
+          <td class="action">
+            <a href="#edit" class="btn btn-outline-secondary btn-sm">Edit</a>
+            <a href="#delete" class="btn btn-outline-danger btn-sm">Delete</a>
+          </td>
+        </tr>
+        {% endfor %}
+        
+      </tbody>
+    </table>
+  </div>
+
+</div>
+
+{% for item in author_list %}
+{{item.user}}
+{{item.id}}
+{% endfor %}
+{% endblock body %}

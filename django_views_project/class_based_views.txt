@@ -1,0 +1,96 @@
+What are class based views ?
+-----------------------------------------------------------------------------------------------------------------------
+CBVs provide a more structured and reusable way to define views for handling HTTP requests. They are an alternative 
+to function-based views and offer better code organization, code reusability, and consistency.
+
+Commonly Used views
+-----------------------------------------------------------------------------------------------------------------------
+
+TemplateView
+-----------------------------------------------------------
+1. Used for rendering HML Templates
+2. A base view for displaying static content or content retrieved from the database.
+
+example
+-----------------------------
+from django.views.generic import TemplateView
+
+class HomePageView(TemplateView):
+    template_name = "home.html"
+
+
+ListView and DetailView
+-----------------------------------------------------------
+1. Used for listing multiple objects and displaying the details of a single object, respectively.
+2. Automatically generate a list or detail view for a model.
+
+example
+-----------------------------
+from django.views.generic import ListView, DetailView
+from .models import Product
+
+class ProductListView(ListView):
+    model = Product
+    template_name = "product_list.html"
+
+class ProductDetailView(DetailView):
+    model = Product
+    template_name = "product_detail.html"
+
+
+CreateView, UpdateView, and DeleteView
+-----------------------------------------------------------
+1. Used for creating, updating, and deleting objects.
+2. You specify the model, form class, and template name
+
+example
+-----------------------------
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
+from .models import Article
+
+class ArticleCreateView(CreateView):
+    model = Article
+    fields = ['title', 'content']
+    template_name = "article_form.html"
+
+class ArticleUpdateView(UpdateView):
+    model = Article
+    fields = ['title', 'content']
+    template_name = "article_form.html"
+
+class ArticleDeleteView(DeleteView):
+    model = Article
+    success_url = "/articles/"
+    template_name = "article_confirm_delete.html"
+
+
+RedirectView
+-----------------------------------------------------------
+1. Used for simple URL redirections.
+2. You specify the URL to redirect to using the url attribute.
+
+example
+-----------------------------
+from django.views.generic import RedirectView
+
+class MyRedirectView(RedirectView):
+    url = "/new-location/"
+
+FormView
+-----------------------------------------------------------
+1. Used for displaying and processing forms.
+
+example
+-----------------------------
+from django.views.generic.edit import FormView
+from .forms import ContactForm
+
+class ContactFormView(FormView):
+    form_class = ContactForm
+    template_name = "contact_form.html"
+    success_url = "/contact/success/"
+
+
+
+Create Custom Class based view
+-----------------------------------------------------------------------------------------------------------------------

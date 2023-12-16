@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<div class="container">
+  <br>
+  <button type="button" id="cwn--open-model-form-btn" class="btn btn-outline-primary">Create Author</button>
+  <br>
+  <div id="model--form-container" class="model--form-container">
+    <div class="cwn--model-form-content">
+      <span class="cwn--model-close" id="cwn--model-close">&times;</span>
+      <h2>Pop-up Form</h2>
+      <form method="post" , action="{% url 'blogger__author' %}">
+        {% csrf_token %}
+        <!-- Your form fields go here -->
+        <input type="text" name="author" id="author" class="form-control"
+          placeholder="Name of the Author">
+        <br>
+        <input type="email" name="email" id="email" class="form-control"
+          placeholder="Email Address">
+        <br>
+        <input type="text" name="origin" id="origin" class="form-control"
+          placeholder="Place of Origin">
+        <br>
+        <textarea class="form-control" name="description" id="description"
+          rows="3" placeholder="More about the Author"></textarea>
+        <br><br>
+
+        <!-- Add more form fields as needed -->
+        <div class="cwn--button-container">
+          <button type="button" id="cwn--model-cancel-btn"
+            class="btn btn-outline-secondary">Cancel</button>
+          <button type="submit" id="cwn--model-submit-btn"
+            class="btn btn-outline-primary">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<br><br>
+<div class="container">
+  <div class="table-responsive">
+    <table id="table2" class="table table-bordered">
+      <thead>
+        <tr>
+          <th class="header"><span class="last-name">Author Name</span></th>
+          <th class="header"><span class="first-name">Email Address</span></th>
+          <th class="header"><span class="email">Origin</span></th>
+          <th class="header"><span class="dues">Description</span></th>
+          <th class="header"><span class="dues">Action</span></th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for author in author_list %}
+        <tr>
+          <td class="last-name">{{author.name}}</td>
+          <td class="first-name">{{author.email}}</td>
+          <td class="email">{{author.origin}}</td>
+          <td class="dues">{{author.bio}}</td>
+          <td class="action">
+            <a href="#edit" id="cwn--open-model-form-btn" class="btn btn-outline-secondary btn-sm">Edit</a>
+            <a href="#delete" class="btn btn-outline-danger btn-sm">Delete</a>
+          </td>
+        </tr>
+        {% endfor %}
+        
+      </tbody>
+    </table>
+  </div>
+
+</div>
+
+{% for item in author_list %}
+{{item.user}}
+{{item.id}}
+{% endfor %}
+{% endblock body %}

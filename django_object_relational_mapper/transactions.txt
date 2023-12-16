@@ -1,0 +1,44 @@
+What are Transactions in Django ORM ?
+-----------------------------------------------------------------------------------------------------------------------
+In Django's Object-Relational Mapping (ORM), transactions are used to group one or more database operations into a 
+single unit of work that is either entirely completed (committed) or entirely undone (rolled back). 
+
+Transactions ensure the consistency and integrity of your database by guaranteeing that either all changes are saved 
+or none of them are, helping to prevent data corruption and maintain data integrity.
+
+
+Here are some key concepts related to transactions in Django ORM:
+-----------------------------------------------------------------------------------------------------------------------
+
+Transaction Management Commands:
+-----------------------------------------------------------
+
+1. transaction.atomic(): 
+-----------------------------
+This is a context manager that allows you to wrap a block of code in a transaction. Any database operations performed 
+within the context manager will be part of a single transaction. 
+
+If an exception is raised within the context, the transaction will be rolled back; otherwise, it will be committed.
+
+2. Automatic Transactions:
+-----------------------------
+By default, Django wraps each HTTP request in a transaction. This means that when you perform database operations within 
+a view function, they are automatically wrapped in a transaction. If an exception occurs within the view function, the 
+transaction is rolled back
+
+3. Nested Transactions:
+-----------------------------
+Django supports nested transactions. When using transaction.atomic(), you can have nested transactions, but the outermost 
+transaction will control the final outcome. If any inner transaction is rolled back, it will affect the entire transaction.
+
+4. Savepoints:
+-----------------------------
+Django supports savepoints within transactions. You can create savepoints to mark specific points within a transaction. 
+If an error occurs, you can roll back to a savepoint without rolling back the entire transaction.
+
+5. Manual Transaction Management:
+-----------------------------
+While Django provides automatic transaction management for most use cases, you can also manually manage transactions 
+using transaction.commit() and transaction.rollback(). 
+
+However, manual management is usually unnecessary in typical Django applications.

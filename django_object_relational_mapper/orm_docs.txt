@@ -1,0 +1,83 @@
+Challenges with ORM queries and their solutions
+-----------------------------------------------------------------------------------------------------------------------
+
+1. N+1 Query Problem: 
+-----------------------------------------------------------
+When we fetch a list of objects and ther related foreign key objects, we might encounter the N+1 query problem where
+each object requires am additional query to fetch its related data.
+
+--> We can use django select_related and prefetch_related
+
+2. Circular References
+-----------------------------------------------------------------------------------------------------------------------
+If we have models with Circular references (eg--> two models referring each other), it can be tricky how to fetch data
+without causing infinite loop
+
+--> We can use related_name attribute in the foreign key or OneToOneField to specify custom names for reverse relations
+
+3. Data Volume 
+-----------------------------------------------------------
+
+When dealing with large datasets or deeply nested related data, we may encounter issues with memory consumptions and
+quer performance 
+
+--> We should consider pagination to limit the number of records returned at once. Also, use database indexes to speed up 
+the query. If dealing with extremely large datasets, consider using cache mechanisms.
+
+
+select_related vs prefetch_related
+-----------------------------------------------------------------------------------------------------------------------
+
+1. select_related
+-----------------------------------------------------------
+Performs an SQL join to fetch related objects in a single query. It is useful when we have ForeignKey or OneToOneField
+relationship
+
+eg --> post_with_author = Post.objects.select_related('author')
+--> here author is field name defined in Post model which is using ForeignKey to link with Author model. 
+--> Now we can access author of each book without any additional query
+
+for post in post_with_author:
+  print(post.title, post.author.user)
+
+Equivalent SQL Query
+-----------------------------
+SELECT blogger_post.id, blogger_post.title, blogger_post.id, blogger_post.content, blogger_author.user, blogger_author.origin
+FROM blogger_post 
+INNER JOIN blogger_author ON blogger_post.author_id = blogger_author.id
+
+
+2. prefetch_related
+-----------------------------------------------------------
+It does a separate query but is more efficient when we are dealing with many-to-many and reverse ForeignKey relationship
+
+Suppose we have two models: Author and Post, where Author has a reverse ForeignKey to Post (each auther has written multiple posts)
+To use prefetch_related to retrieve authors with their posts
+
+author_with_post = Author.objects.prefetch_related('post_set')
+
+Now we can access the books of each author without any additional queries
+for author in author_with_post:
+    print(author.user)
+    for post in author.post_set.all()
+        print(post.title)
+
+
+
+--> prefetch_related('book_set') tells django to fetch all related posts for each author efficiently. When we acccess 
+author.post_set.all(), it does not trigger additional queries because data was prefetched. 
+
+Equivalent SQL query
+-----------------------------
+
+Query 1: Fetch authors
+--------------
+SELECT blogger_author.id, blogger_author.user 
+FROM blogger_author
+
+Query 2: Fetch Books for authors 
+--------------
+SELECT * FROM blogger_post
+WHERE blogger_author.author_id IN (?. ?, .....) --> IDs of the authors fetched in Query 1
+
+

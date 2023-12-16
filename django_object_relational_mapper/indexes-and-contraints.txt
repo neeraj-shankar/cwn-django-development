@@ -1,0 +1,63 @@
+What are indexes? 
+What are indexes?
+-----------------------------------------------------------------------------------------------------------------------
+Indexes in a database are used to improve the retrieval performance of records. They work by creating a data structure 
+that provides a quick way to look up rows in a table.
+
+In Django's ORM, we can define indexes in your models using the indexes option within a model's Meta class.
+
+Here's an example of how to create an index in a Django model:
+-----------------------------------------------------------
+from django.db import models
+
+class MyModel(models.Model):
+    name = models.CharField(max_length=100)
+    email = models.EmailField()
+    
+    class Meta:
+        indexes = [
+            models.Index(fields=['name'], name='name_idx'),
+        ]
+
+What are constraints?
+-----------------------------------------------------------------------------------------------------------------------
+Constraints in a database ensure the integrity of the data. They impose rules on the data that must be followed to 
+maintain data consistency.
+
+1. Unique Constraint: Ensures that values in a field are unique across all rows.
+-----------------------------------------------------------
+from django.db import models
+
+class MyModel(models.Model):
+    username = models.CharField(max_length=100, unique=True)
+    email = models.EmailField()
+    
+    class Meta:
+        constraints = [
+            models.UniqueConstraint(fields=['username'], name='unique_username'),
+        ]
+
+
+2. Check Constraint: Allows you to define a custom constraint to check data based on a condition you specify.
+-----------------------------------------------------------
+from django.db import models
+from django.core.exceptions import ValidationError
+
+def validate_age(value):
+    if value < 18 or value > 100:
+        raise ValidationError('Age must be between 18 and 100.')
+
+class Person(models.Model):
+    first_name = models.CharField(max_length=50)
+    last_name = models.CharField(max_length=50)
+    age = models.IntegerField(validators=[validate_age])
+
+    class Meta:
+        constraints = [
+            models.CheckConstraint(check=models.Q(age__gte=18, age__lte=100), name='age_range_check')
+        ]
+
+
+3. Foreign Key Constraint: Enforces referential integrity by ensuring that a value in a field matches a value in another 
+                           field in a related table.
+-----------------------------------------------------------

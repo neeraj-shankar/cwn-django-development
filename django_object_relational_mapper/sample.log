@@ -1,0 +1,400 @@
+C:\test\PycharmProjects\GlobalCompliance\venv\Scripts\python.exe "C:/Program Files/JetBrains/PyCharm Community Edition 2023.1.2/plugins/python-ce/helpers/pycharm/_jb_pytest_runner.py" --target test_api_tax_calendar_endtoend.py::test_api_tax_calendar_endtoend 
+Testing started at 9:41 PM ...
+Launching pytest with arguments test_api_tax_calendar_endtoend.py::test_api_tax_calendar_endtoend --no-header --no-summary -q in C:\test\vitr-testing-vat-compliance\gc-automation\gc_tests\backend\Team_Those_Guys\configuration\TaxReportingCalendars
+
+============================= test session starts =============================
+collecting ... collected 1 item
+
+test_api_tax_calendar_endtoend.py::test_api_tax_calendar_endtoend 
+
+================= 1 failed, 13 warnings in 2291.60s (0:38:11) =================
+Starting test:  backend/Team_Those_Guys/configuration/TaxReportingCalendars/test_api_tax_calendar_endtoend.py::test_api_tax_calendar_endtoend
+Directory for download present....
+Running tests with chrome
+Download Directory C:\test\_data
+FAILED [100%]Tenant Data: {'tenantId': 'bf82c12f-12f2-4f61-8f3a-dca87a930b04', 'registrationMetadata': {'ecwClientCode': None}, 'roles': [{'platformProductCode': 'acct-mgmt', 'userRoleCode': 'acct-adm', 'userRoleName': 'Admin'}, {'platformProductCode': 'glob-comp', 'userRoleCode': 'gc-import-user', 'userRoleName': 'Data Import User'}], 'partitionRoles': [], 'tenant': {'id': 'bf82c12f-12f2-4f61-8f3a-dca87a930b04', 'name': 'GC Testing', 'type': 'Client', 'subType': 'SMB', 'oraclePartyNumber': '282872516'}, 'subscription': {'id': 'stand', 'status': 'Authorized', 'features': [{'platformProductCode': 'glob-comp', 'featureCode': '300', 'featureName': 'VAT Compliance'}]}, 'platformUserPermisson': {'canViewUserManagement': True, 'canViewCompanyManagement': True, 'canViewBilling': True, 'canViewSubscriptions': True, 'canViewSecurityAndCredentials': True, 'canViewConnectors': False}}
+Error Time: 2023-10-18T21:46:04 Eastern Daylight Time
+Error Time: 2023-10-18T21:46:14 Eastern Daylight Time
+Error Time: 2023-10-18T21:46:25 Eastern Daylight Time
+Error Time: 2023-10-18T21:46:36 Eastern Daylight Time
+Error Time: 2023-10-18T21:46:47 Eastern Daylight Time
+Error Time: 2023-10-18T21:46:57 Eastern Daylight Time
+Error Time: 2023-10-18T21:47:08 Eastern Daylight Time
+Error Time: 2023-10-18T21:47:19 Eastern Daylight Time
+Error Time: 2023-10-18T21:47:29 Eastern Daylight Time
+Error Time: 2023-10-18T21:47:40 Eastern Daylight Time
+Error Time: 2023-10-18T21:47:51 Eastern Daylight Time
+Error Time: 2023-10-18T21:48:02 Eastern Daylight Time
+Error Time: 2023-10-18T21:48:12 Eastern Daylight Time
+Error Time: 2023-10-18T21:48:23 Eastern Daylight Time
+Error Time: 2023-10-18T21:48:35 Eastern Daylight Time
+Error Time: 2023-10-18T21:48:45 Eastern Daylight Time
+Error Time: 2023-10-18T21:48:56 Eastern Daylight Time
+Error Time: 2023-10-18T21:49:07 Eastern Daylight Time
+Error Time: 2023-10-18T21:49:17 Eastern Daylight Time
+Error Time: 2023-10-18T21:49:28 Eastern Daylight Time
+Error Time: 2023-10-18T21:49:39 Eastern Daylight Time
+Error Time: 2023-10-18T21:49:50 Eastern Daylight Time
+Error Time: 2023-10-18T21:50:00 Eastern Daylight Time
+Error Time: 2023-10-18T21:50:11 Eastern Daylight Time
+Error Time: 2023-10-18T21:50:22 Eastern Daylight Time
+Error Time: 2023-10-18T21:50:32 Eastern Daylight Time
+Error Time: 2023-10-18T21:50:43 Eastern Daylight Time
+Error Time: 2023-10-18T21:50:54 Eastern Daylight Time
+Error Time: 2023-10-18T21:51:05 Eastern Daylight Time
+Error Time: 2023-10-18T21:51:15 Eastern Daylight Time
+Error Time: 2023-10-18T21:51:26 Eastern Daylight Time
+Error Time: 2023-10-18T21:51:37 Eastern Daylight Time
+Error Time: 2023-10-18T21:51:47 Eastern Daylight Time
+Error Time: 2023-10-18T21:51:58 Eastern Daylight Time
+Error Time: 2023-10-18T21:52:09 Eastern Daylight Time
+Error Time: 2023-10-18T21:52:19 Eastern Daylight Time
+Error Time: 2023-10-18T21:52:30 Eastern Daylight Time
+Error Time: 2023-10-18T21:52:41 Eastern Daylight Time
+Error Time: 2023-10-18T21:52:51 Eastern Daylight Time
+Error Time: 2023-10-18T21:53:02 Eastern Daylight Time
+Error Time: 2023-10-18T21:53:13 Eastern Daylight Time
+Error Time: 2023-10-18T21:53:23 Eastern Daylight Time
+Error Time: 2023-10-18T21:53:34 Eastern Daylight Time
+Error Time: 2023-10-18T21:53:45 Eastern Daylight Time
+Error Time: 2023-10-18T21:53:55 Eastern Daylight Time
+Error Time: 2023-10-18T21:54:06 Eastern Daylight Time
+Error Time: 2023-10-18T21:54:17 Eastern Daylight Time
+Error Time: 2023-10-18T21:54:27 Eastern Daylight Time
+Error Time: 2023-10-18T21:54:38 Eastern Daylight Time
+Error Time: 2023-10-18T21:54:49 Eastern Daylight Time
+Error Time: 2023-10-18T21:54:59 Eastern Daylight Time
+Error Time: 2023-10-18T21:55:10 Eastern Daylight Time
+Error Time: 2023-10-18T21:55:21 Eastern Daylight Time
+DB Updates took 530 seconds
+['b014d118-d254-48ef-b84c-03df2041a435']
+Using Unique ID: 231018215749
+2127949
+2172589
+2127949
+2172590
+2127949
+2172591
+2127949
+2172592
+2127949
+2172609
+Using Unique ID: 231018221504
+['b014d118-d254-48ef-b84c-03df2041a435']
+DEBUG1 Found the id "6" for the column "Report"
+
+backend\Team_Those_Guys\configuration\TaxReportingCalendars\test_api_tax_calendar_endtoend.py:12 (test_api_tax_calendar_endtoend)
+api = <backend.gc_api.GC_Api object at 0x000002D7762E4410>
+ui = <frontend.gc_pages.GC_Pages object at 0x000002D776475310>
+
+    def test_api_tax_calendar_endtoend(api: GC_Api, ui: GC_Pages):
+        """
+         E2E Test for Monthly report with custom tax calendar
+         Also, This test validates that the override value flows to the return preview.
+         Cards: VATREQ-606, VATB-2741
+        """
+        api.db.restore('10_6_GC_Returns_SetupWithData')
+        uniqueID = api.testUtil.get_unique_identifier1()
+        api.client.login()
+    
+        # to dates all set to a date in the following calendar month
+        api.taxCalendars.add_tax_calendar_settings(f"MonthlyTaxCal", "Test to verify the to date can be set to the following month")
+        api.taxCalendars.add_tax_calendar_month(f"{api.year}", "01", f"{api.year}-12-15", f"{api.year}-01-14", False)
+        api.taxCalendars.add_tax_calendar_month(f"{api.year}", "02", f"{api.year}-01-15", f"{api.year}-02-14", False)
+        api.taxCalendars.add_tax_calendar_month(f"{api.year}", "03", f"{api.year}-02-15", f"{api.year}-03-14", False)
+        api.taxCalendars.add_tax_calendar_month(f"{api.year}", "04", f"{api.year}-03-15", f"{api.year}-04-14", False)
+        api.taxCalendars.add_tax_calendar_month(f"{api.year}", "05", f"{api.year}-04-15", f"{api.year}-05-14", False)
+        api.taxCalendars.add_tax_calendar_month(f"{api.year}", "06", f"{api.year}-05-15", f"{api.year}-06-14", False)
+        api.taxCalendars.add_tax_calendar_month(f"{api.year}", "07", f"{api.year}-06-15", f"{api.year}-07-14", False)
+        api.taxCalendars.add_tax_calendar_month(f"{api.year}", "08", f"{api.year}-07-15", f"{api.year}-08-14", False)
+        api.taxCalendars.add_tax_calendar_month(f"{api.year}", "09", f"{api.year}-08-15", f"{api.year}-09-14", False)
+        api.taxCalendars.add_tax_calendar_month(f"{api.year}", "10", f"{api.year}-09-15", f"{api.year}-10-14", False)
+        api.taxCalendars.add_tax_calendar_month(f"{api.year}", "11", f"{api.year}-10-15", f"{api.year}-11-14", False)
+        api.taxCalendars.add_tax_calendar_month(f"{api.year}", "12", f"{api.year}-11-15", f"{api.year}-12-14", True)
+    
+        #Edit Report Config
+        #Build Lists
+        companyList = api.taxdata.build_company_list('11235')
+        countryList = api.taxdata.build_country_list('Denmark')
+        returnList = api.adjustments.build_return_list('Denmark European Sales Listing', 'filing report', companyList, countryList, True)
+        # edit some fields
+        api.reportConfig.edit_return_configuration("filing report", companyList[0], returnList[0], "active", "firstFilingPeriodYear", api.year, "")
+        api.reportConfig.edit_return_configuration("filing report", companyList[0], returnList[0], "active", "firstFilingPeriodId", "101", "")
+        api.reportConfig.edit_return_configuration("filing report", companyList[0], returnList[0], "active", "lastFilingPeriodYear", api.year, "")
+        api.reportConfig.edit_return_configuration("filing report", companyList[0], returnList[0], "active", "lastFilingPeriodId", "112", "")
+    
+        taxCalID = api.taxCalendars.retrieve_tax_calendar_id("active", "MonthlyTaxCal")
+        api.reportConfig.edit_return_configuration("filing report", companyList[0], returnList[0], "active", "taxReportingCalendar", taxCalID, "")
+    
+        #Create New Import Config
+        api.importConfig.add_new_import_config_settings('ManualImport2',"importDemo.csv",'Transactional', 'Manual', ',', '"', False, 2, "Edit by status note")
+        api.importConfig.add_new_import_config_mappings("InvoiceDate", "1")
+        api.importConfig.add_new_import_config_mappings("FilingDate", "2")
+        api.importConfig.add_new_import_config_mappings("DateOfSupply", "3")
+        api.importConfig.add_new_import_config_mappings("RecoverableDate", "4")
+        api.importConfig.add_new_import_config_mappings("PaymentDate", "5")
+        api.importConfig.add_new_import_config_mappings("InvoiceNumber", "6")
+        api.importConfig.add_new_import_config_mappings("LineItemNumber", "7")
+        api.importConfig.add_new_import_config_mappings("CompanyCode", "8")
+        api.importConfig.add_new_import_config_mappings("Not Defined", "9")
+        api.importConfig.add_new_import_config_mappings("ConnectorTaxCode", "10")
+        api.importConfig.add_new_import_config_mappings("Not Defined", "11")
+        api.importConfig.add_new_import_config_mappings("SitusJurisdiction", "12")
+        api.importConfig.add_new_import_config_mappings("POJurisdiction", "13")
+        api.importConfig.add_new_import_config_mappings("AOJurisdiction", "14")
+        api.importConfig.add_new_import_config_mappings("DestJurisdiction", "15")
+        api.importConfig.add_new_import_config_mappings("ADestJurisdiction", "16")
+        api.importConfig.add_new_import_config_mappings("FilingCategory", "17")
+        api.importConfig.add_new_import_config_mappings("RateClass", "18")
+        api.importConfig.add_new_import_config_mappings("ReturnsTaxCode", "19")
+        api.importConfig.add_new_import_config_mappings("RecovPct", "20")
+        api.importConfig.add_new_import_config_mappings("Imposition", "21")
+        api.importConfig.add_new_import_config_mappings("TaxRate", "22")
+        api.importConfig.add_new_import_config_mappings("FilingCurrency", "23")
+        api.importConfig.add_new_import_config_mappings("TransactionCurrency", "24")
+        api.importConfig.add_new_import_config_mappings("FCBasisAmt", "25")
+        api.importConfig.add_new_import_config_mappings("FCExemptAmt", "26")
+        api.importConfig.add_new_import_config_mappings("FCNonTaxAmt", "27")
+        api.importConfig.add_new_import_config_mappings("FCTaxableAmt", "28")
+        api.importConfig.add_new_import_config_mappings("FCTaxAmt", "29")
+        api.importConfig.add_new_import_config_mappings("FCRecovTaxAmt", "30")
+        api.importConfig.add_new_import_config_mappings("FCNonRecovTaxAmt", "31")
+        api.importConfig.add_new_import_config_mappings("ExchRate", "32")
+        api.importConfig.add_new_import_config_mappings("TCBasisAmt", "33")
+        api.importConfig.add_new_import_config_mappings("TCExemptAmt", "34")
+        api.importConfig.add_new_import_config_mappings("TCNonTaxAmt", "35")
+        api.importConfig.add_new_import_config_mappings("TCTaxableAmt", "36")
+        api.importConfig.add_new_import_config_mappings("TCTaxAmt", "37")
+        api.importConfig.add_new_import_config_mappings("TCRecovTaxAmt", "38")
+        api.importConfig.add_new_import_config_mappings("TCNonRecovTaxAmt", "39")
+        api.importConfig.add_new_import_config_mappings("VendorRegistrationNumber", "40")
+        api.importConfig.add_new_import_config_mappings("VendorCountryOfRegistration", "41")
+        api.importConfig.add_new_import_config_mappings("CustRegistrationNumber", "42")
+        api.importConfig.add_new_import_config_mappings("CustCountryOfRegistration", "43")
+        api.importConfig.add_new_import_config_mappings("CustomReturnsFields", "44")
+        api.importConfig.add_new_import_config_save()
+    
+        #Import Data
+        api.imports.import_file('ManualImport2', 'Global Compliance Import Files/Configuration Import Files/MonthlyTaxCalendarDenmark.csv', 'test')
+        time.sleep(10)
+        api.imports.wait_for_import_to_complete('MonthlyTaxCalendarDenmark.csv', api.client.get_username(), 'ManualImport2')
+        time.sleep(10)
+    
+        #Return Validation
+        api.reportPrep.start_report_prep_workflow(f'{api.year}-04-01', f'{api.year}-04-30', 'Denmark European Sales Listing', 'Vertex Test Company', f'{api.year}-04-25')
+        api.reportPrep.start_report_prep_workflow(f'{api.year}-04-01', f'{api.year}-04-30', 'Denmark VAT Declaration', 'Vertex Test Company', f'{api.year}-04-25')
+    
+        api.reportPrep.update_report_prep_workflow(f'{api.year}-04-01', f'{api.year}-04-30', 'Statutory', 'Denmark European Sales Listing', 'Vertex Test Company', 'preparation sign off', '', f'{api.year}-04-25', '')
+        # Wait for Preparation Sign-Off to complete
+        api.reportPrep.wait_for_signoff_to_complete(f'{api.year}-04-01', f'{api.year}-04-30', 'Denmark European Sales Listing', 'Vertex Test Company')
+        # View in Approval Grid and Compare Due Dates
+    
+        api.reviewApproval.verify_review_approval_internal_due_date_by_days('Review', 'Vertex Test Company', 'Denmark European Sales Listing', f'Mar {api.year}', 3)
+        # Set Workflow Status to Reviewer Signed-Off
+        api.reviewApproval.review_approval_transition_status('Review', 'Vertex Test Company', 'Denmark European Sales Listing', f'Mar {api.year}', 'review sign off', '')
+        # View in Submission Grid and Compare Due Dates
+        api.reviewApproval.review_approval_transition_status('Approval', 'Vertex Test Company', 'Denmark European Sales Listing', f'Mar {api.year}', 'approval sign off', '')
+        api.submission.verify_submission_internal_due_date_by_days('Submission in Process', 'Vertex Test Company', 'Denmark European Sales Listing', f'Mar {api.year}', 3)
+        # uniqueID = 231017141522
+        # Validate that the Manual overrides on the return should flow through to the pdf.
+        ui.navigation.login()
+        ui.navigation.wait_for_loading()
+        ui.navigation.menu_click('Report Preparation')
+        ui.navigation.menu_click('Reports and Returns')
+        ui.navigation.wait_for_loading()
+        ui.navigation.filter_column('Company', f'Vertex Test Company', True)
+        ui.navigation.wait_for_loading()
+        ui.navigation.filter_column('Workflow Status', 'In Progress', True)
+        ui.navigation.wait_for_loading()
+        ui.navigation.scroll_num_right_of_grid(10)
+        ui.navigation.select_action('Report', 'Denmark VAT Declaration', 'View Report/Return')
+        ui.navigation.wait_for_loading()
+        ui.preview.click_line_item_action_menu('LC_DK_FILE_START', 'Override Field')
+        ui.navigation.wait_for_loading()
+>       ui.navigation.form_text_input('Override Value', '10-03-2023')
+
+test_api_tax_calendar_endtoend.py:137: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+..\..\..\..\lib\ui\navigation.py:452: in form_text_input
+    text_box = self.driver.find_element(By.XPATH,
+C:\test\PycharmProjects\GlobalCompliance\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py:831: in find_element
+    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+C:\test\PycharmProjects\GlobalCompliance\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py:440: in execute
+    self.error_handler.check_response(response)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <selenium.webdriver.remote.errorhandler.ErrorHandler object at 0x000002D77626E150>
+response = {'status': 404, 'value': '{"value":{"error":"no such element","message":"no such element: Unable to locate element: {\...\n\\tRtlGetAppContainerNamedObjectPath [0x77237B1E+286]\\n\\tRtlGetAppContainerNamedObjectPath [0x77237AEE+238]\\n"}}'}
+
+    def check_response(self, response: Dict[str, Any]) -> None:
+        """Checks that a JSON response from the WebDriver does not have an
+        error.
+    
+        :Args:
+         - response - The JSON response from the WebDriver server as a dictionary
+           object.
+    
+        :Raises: If the response contains an error message.
+        """
+        status = response.get("status", None)
+        if not status or status == ErrorCode.SUCCESS:
+            return
+        value = None
+        message = response.get("message", "")
+        screen: str = response.get("screen", "")
+        stacktrace = None
+        if isinstance(status, int):
+            value_json = response.get("value", None)
+            if value_json and isinstance(value_json, str):
+                import json
+    
+                try:
+                    value = json.loads(value_json)
+                    if len(value) == 1:
+                        value = value["value"]
+                    status = value.get("error", None)
+                    if not status:
+                        status = value.get("status", ErrorCode.UNKNOWN_ERROR)
+                        message = value.get("value") or value.get("message")
+                        if not isinstance(message, str):
+                            value = message
+                            message = message.get("message")
+                    else:
+                        message = value.get("message", None)
+                except ValueError:
+                    pass
+    
+        exception_class: Type[WebDriverException]
+        if status in ErrorCode.NO_SUCH_ELEMENT:
+            exception_class = NoSuchElementException
+        elif status in ErrorCode.NO_SUCH_FRAME:
+            exception_class = NoSuchFrameException
+        elif status in ErrorCode.NO_SUCH_SHADOW_ROOT:
+            exception_class = NoSuchShadowRootException
+        elif status in ErrorCode.NO_SUCH_WINDOW:
+            exception_class = NoSuchWindowException
+        elif status in ErrorCode.STALE_ELEMENT_REFERENCE:
+            exception_class = StaleElementReferenceException
+        elif status in ErrorCode.ELEMENT_NOT_VISIBLE:
+            exception_class = ElementNotVisibleException
+        elif status in ErrorCode.INVALID_ELEMENT_STATE:
+            exception_class = InvalidElementStateException
+        elif (
+            status in ErrorCode.INVALID_SELECTOR
+            or status in ErrorCode.INVALID_XPATH_SELECTOR
+            or status in ErrorCode.INVALID_XPATH_SELECTOR_RETURN_TYPER
+        ):
+            exception_class = InvalidSelectorException
+        elif status in ErrorCode.ELEMENT_IS_NOT_SELECTABLE:
+            exception_class = ElementNotSelectableException
+        elif status in ErrorCode.ELEMENT_NOT_INTERACTABLE:
+            exception_class = ElementNotInteractableException
+        elif status in ErrorCode.INVALID_COOKIE_DOMAIN:
+            exception_class = InvalidCookieDomainException
+        elif status in ErrorCode.UNABLE_TO_SET_COOKIE:
+            exception_class = UnableToSetCookieException
+        elif status in ErrorCode.TIMEOUT:
+            exception_class = TimeoutException
+        elif status in ErrorCode.SCRIPT_TIMEOUT:
+            exception_class = TimeoutException
+        elif status in ErrorCode.UNKNOWN_ERROR:
+            exception_class = WebDriverException
+        elif status in ErrorCode.UNEXPECTED_ALERT_OPEN:
+            exception_class = UnexpectedAlertPresentException
+        elif status in ErrorCode.NO_ALERT_OPEN:
+            exception_class = NoAlertPresentException
+        elif status in ErrorCode.IME_NOT_AVAILABLE:
+            exception_class = ImeNotAvailableException
+        elif status in ErrorCode.IME_ENGINE_ACTIVATION_FAILED:
+            exception_class = ImeActivationFailedException
+        elif status in ErrorCode.MOVE_TARGET_OUT_OF_BOUNDS:
+            exception_class = MoveTargetOutOfBoundsException
+        elif status in ErrorCode.JAVASCRIPT_ERROR:
+            exception_class = JavascriptException
+        elif status in ErrorCode.SESSION_NOT_CREATED:
+            exception_class = SessionNotCreatedException
+        elif status in ErrorCode.INVALID_ARGUMENT:
+            exception_class = InvalidArgumentException
+        elif status in ErrorCode.NO_SUCH_COOKIE:
+            exception_class = NoSuchCookieException
+        elif status in ErrorCode.UNABLE_TO_CAPTURE_SCREEN:
+            exception_class = ScreenshotException
+        elif status in ErrorCode.ELEMENT_CLICK_INTERCEPTED:
+            exception_class = ElementClickInterceptedException
+        elif status in ErrorCode.INSECURE_CERTIFICATE:
+            exception_class = InsecureCertificateException
+        elif status in ErrorCode.INVALID_COORDINATES:
+            exception_class = InvalidCoordinatesException
+        elif status in ErrorCode.INVALID_SESSION_ID:
+            exception_class = InvalidSessionIdException
+        elif status in ErrorCode.UNKNOWN_METHOD:
+            exception_class = UnknownMethodException
+        else:
+            exception_class = WebDriverException
+        if not value:
+            value = response["value"]
+        if isinstance(value, str):
+            raise exception_class(value)
+        if message == "" and "message" in value:
+            message = value["message"]
+    
+        screen = None  # type: ignore[assignment]
+        if "screen" in value:
+            screen = value["screen"]
+    
+        stacktrace = None
+        st_value = value.get("stackTrace") or value.get("stacktrace")
+        if st_value:
+            if isinstance(st_value, str):
+                stacktrace = st_value.split("\n")
+            else:
+                stacktrace = []
+                try:
+                    for frame in st_value:
+                        line = frame.get("lineNumber", "")
+                        file = frame.get("fileName", "<anonymous>")
+                        if line:
+                            file = f"{file}:{line}"
+                        meth = frame.get("methodName", "<anonymous>")
+                        if "className" in frame:
+                            meth = f"{frame['className']}.{meth}"
+                        msg = "    at %s (%s)"
+                        msg = msg % (meth, file)
+                        stacktrace.append(msg)
+                except TypeError:
+                    pass
+        if exception_class == UnexpectedAlertPresentException:
+            alert_text = None
+            if "data" in value:
+                alert_text = value["data"].get("text")
+            elif "alert" in value:
+                alert_text = value["alert"].get("text")
+            raise exception_class(message, screen, stacktrace, alert_text)  # type: ignore[call-arg]  # mypy is not smart enough here
+>       raise exception_class(message, screen, stacktrace)
+E       selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//input[@data-automation-id='None'] | //textarea[@data-automation-id='None']"}
+E         (Session info: chrome=118.0.5993.71)
+E       Stacktrace:
+E       	GetHandleVerifier [0x003B4DE3+43907]
+E       	(No symbol) [0x00340741]
+E       	(No symbol) [0x002333ED]
+E       	(No symbol) [0x00266760]
+E       	(No symbol) [0x00266C2B]
+E       	(No symbol) [0x00296F62]
+E       	(No symbol) [0x00282BA4]
+E       	(No symbol) [0x002955CA]
+E       	(No symbol) [0x00282956]
+E       	(No symbol) [0x0025E17E]
+E       	(No symbol) [0x0025F32D]
+E       	GetHandleVerifier [0x00665AF9+2865305]
+E       	GetHandleVerifier [0x006AE78B+3163435]
+E       	GetHandleVerifier [0x006A8441+3138017]
+E       	GetHandleVerifier [0x0043E0F0+605840]
+E       	(No symbol) [0x0034A64C]
+E       	(No symbol) [0x00346638]
+E       	(No symbol) [0x0034675F]
+E       	(No symbol) [0x00338DB7]
+E       	BaseThreadInitThunk [0x768A00C9+25]
+E       	RtlGetAppContainerNamedObjectPath [0x77237B1E+286]
+E       	RtlGetAppContainerNamedObjectPath [0x77237AEE+238]
+
+C:\test\PycharmProjects\GlobalCompliance\venv\Lib\site-packages\selenium\webdriver\remote\errorhandler.py:245: NoSuchElementException
