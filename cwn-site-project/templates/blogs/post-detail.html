@@ -1,0 +1,95 @@
+{% extends 'base/index.html' %}
+
+{% load static %}
+{% block title%} Article| {{post_detail.title}}{% endblock%}
+{% block body %}
+
+	<div class="container">	
+		<div class="row">
+
+			<div class="col-md-8 blog-posts">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="post-blog">
+							<div class="blog-image">
+								<img src="{{post_detail.img.url}}" alt="">
+							</div> <!-- /.blog-image -->
+							<div class="blog-content">
+								<span class="meta-date"><a href="#">{{post_detail.date}}</a></span>
+								<span class="meta-comments"><a href="#blog-comments">{{post_detail.category}}</a></span>
+								<span class="meta-author"><a href="#blog-author">{{post_detail.author}}</a></span>
+								<h3>{{post_detail.title}}</h3>
+								<p >{{post_detail.desc|safe}}</p>
+			
+								
+								<div class="tag-items">
+                                    <span class="small-text">Tags:</span>
+                                    <a href="#" rel="tag">business</a>
+                                    <a href="#" rel="tag">html</a>
+                                    <a href="#" rel="tag">education</a>
+                                </div>
+							</div> <!-- /.blog-content -->
+						</div> <!-- /.post-blog -->
+					</div> <!-- /.col-md-12 -->
+				</div> <!-- /.row -->
+				<div class="row">
+					<div class="col-md-12">
+						<div id="blog-author" class="clearfix">
+                            <a href="#" class="blog-author-img pull-left">
+                                <img src="images/includes/author.png" alt="">
+                            </a>
+                            <div class="blog-author-info">
+                                <h4 class="author-name"><a href="#">Candy Sharp</a></h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, quod, doloremque, quia cum maiores commodi consequatur dolore et dolores omnis officiis minus dolor ex quae incidunt veritatis.</p>
+                            </div>
+                        </div>
+					</div> <!-- /.col-md-12 -->
+				</div> <!-- /.row -->
+            
+				<div class="row">
+					<div class="col-md-12">
+                        <div id="blog-comments" class="blog-post-comments">
+                            <h3>Comments</h3>
+                           
+                            <div class="blog-comments-content">
+                             {% for comment in post_detail.comments.all%}
+                                <div class="media">
+                                    <div class="pull-left">
+                                        <img class="media-object" src="images/includes/comment1.jpg" alt="">
+                                    </div>
+                                    <div class="media-body">
+                                        <div class="media-heading">
+                                        	<h4>{{comment.name}}</h4> 
+                                        	<a href="#"><span>{{comment.date}}</span><span>Reply</span></a>
+                                        </div>
+                                        <p>{{comment.desc}}<span class="label label-primary">New</span></p>
+                                        
+                                    </div>
+                                </div>
+                                 {%endfor%}
+                                
+                            </div> <!-- /.blog-comments-content -->
+                        </div> <!-- /.blog-post-comments -->
+                    </div> <!-- /.col-md-12 -->
+				</div> <!-- /.row -->
+				<div class="row">
+                    <div class="col-md-12">
+                        <div class="comment-form">
+                            <h3>Leave a comment</h3>
+                            <div class="widget-inner">
+                               {% block comments %} {% include 'blogs/comments.html' %} {% endblock comments %}
+                            	<!-- Comment form here-->
+                                
+                            </div> <!-- /.widget-inner -->
+                        </div> <!-- /.widget-main -->
+                    </div> <!-- /.col-md-12 -->
+                </div> <!-- /.row -->
+			</div> <!-- /.col-md-8 -->
+
+			<!--sidebar-->
+			{% block sidebar %} {% include 'blogs/sidebar.html' %} {% endblock sidebar %}
+
+		</div> <!-- /.row -->
+	</div> <!-- /.container -->	
+
+{%endblock%}

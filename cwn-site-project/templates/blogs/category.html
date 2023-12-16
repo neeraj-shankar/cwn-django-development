@@ -1,0 +1,39 @@
+{%extends 'base/index.html'%}
+{% load static%}
+{% block title%} Neeraj Shankar| Post Category{% endblock%}
+{%block body%}
+<section class="light-content ">
+		<div class="container">
+			<div class="row">
+				{% for category in category_list%}
+				<div class="col-md-4 col-sm-4">
+					<div class="service-box-wrap">
+					{% if category.img%}
+						<div class="service-icon-wrap">
+							<img src="{{category.img.url}}" style ="max-width: 180px;
+																border-radius: 115px;"alt="">
+						</div> <!-- /.service-icon-wrap -->
+						{%endif%}
+						<div class="service-cnt-wrap">
+							<h3 class="service-title">{{category.title}}</h3>
+							<p>{{category.desc | slice:"200" | safe }}</p>
+						</div>
+						
+						<a class="btn btn-custom " style="padding: 1px 5px 2px 10px;" href="{% url 'categorized_post_page' category.title|slugify %}" role="button">View Blogs</a> <!-- /.service-cnt-wrap -->
+						
+						{% if user.is_superuser %}
+						<a class="btn btn-custom btn-sm" style="padding: 1px 5px 2px 10px;" href="{%url 'edit_category_page' category.slug%}" role="button">Update Category</a>
+						{%endif%}
+					</div> <!-- /.service-box-wrap -->
+				</div> <!-- /.col-md-4 -->
+				{% endfor %}
+				
+			</div>
+
+			
+		</div> <!-- /.container -->
+	</section> <!-- /.services -->
+
+	
+
+{% endblock%}

@@ -1,0 +1,48 @@
+
+{% extends 'base/index.html' %}
+{% load static %}
+{% block body %}
+<!-- Blog Page starts here-->
+    <div class="gt-max-width-1 gt-m-auto">
+        <hr>
+    </div>
+    <div class="gt-content gt-max-width-1 gt-m-auto">
+        <div class="gt-content-left">
+            <h2>This is Blogging websites where you can post your blogs</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. A unde fuga quae odio praesentium voluptatem et, aperiam fugit minima dolor neque minus voluptate impedit facere harum similique, veniam libero inventore nemo iure esse. Soluta?</p>
+        </div>
+        <div class="gt-content-right">
+            <img src="{% static 'img/article.jpg'%}" alt="Blog-image">
+        </div>
+
+    </div>
+
+    <div class="gt-max-width-1 gt-m-auto">
+        <hr>
+    </div>
+    <div class="gt-featured-posts gt-max-width-3  gt-m-auto">
+        <h2>Featured Posts</h2>
+        {% for post in post_list%}
+        <div class="gt-feature-post">
+            <div class="gt-article-left">
+                <img src="{{post.img.url}}" alt="">
+            </div>
+            <div class="gt-article-right">
+                <h4>{{post.title}}</h4>
+                <p>{{post.desc| slice:":200" | safe}}.....</p>
+                <div class="gt-blog-read">
+                    <a href="{% url 'post_detail_page' post.id %}">Read More</a>
+                    {% if user.is_superuser %}
+                    <a href="{% url 'edit_post_page' post.id %}">Update Post</a>
+                    {%endif%}
+                </div>
+
+                <span>{{post.author}}</span> <span>{{post.date}} | {{post.read_time}} min Read</span> <span> |{{post.tag}}</span>
+            </div>
+        </div>
+        {% endfor%}
+
+        
+    </div>
+    <!-- Blog ends-->
+    {% endblock  %}

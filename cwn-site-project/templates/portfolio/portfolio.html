@@ -1,0 +1,187 @@
+{% extends 'base/index.html' %}
+{% load static%}
+{% block title%} Neeraj Shankar- Software Engineer, Freelancer and Blogger {% endblock%}
+{% block body %}
+ 
+       <!-- home section start -->
+    <section class="home" id="home">
+        <div class="max-width">
+            <div class="home-content">
+                <div class="text-1">My name is</div>
+                <br>
+                <div class="text-2">Neeraj Shankar</div>
+                <br>
+                <div class="text-3">And I am a <span class="typing"></span></div>
+            
+            </div>
+        </div>
+    </section>
+
+    <!-- about section start -->
+    <section class="about" id="about">
+        <div class="max-width">
+        {% for about in about_me%}
+            <h2 class="title">About Me</h2>
+            <div class="about-content">
+                <div class="column left">
+                    <img src="{{about.img.url}}" alt="">
+                </div>
+                <div class="column right">
+                    <div class="text">I'm Neeraj and I'm a <span class="typing-2"></span></div>
+                    <p>{{about.desc | safe}}</p>
+                    <a href="#">Download CV</a>
+                </div>
+            </div>
+        </div>
+        {% endfor%}
+    </section>
+
+    <!-- services section start -->
+    <section class="services" id="services">
+        <div class="max-width">
+            <h2 class="title">My Services</h2>
+            <div class="serv-content">
+                {%for service in my_service%}
+                <div class="card">
+                    <div class="box">
+                        <i class="fas fa-code"></i>
+                        <div class="text">{{service.type}}</div>
+                        <p style="color: whitesmoke">{{service.desc|safe}}</p>
+                    </div>
+                </div>
+                {%endfor%}
+               </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials-widget">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="bxslider">
+						<div class="testimonial">
+							<div class="testimonial-content">
+								<span class="testimonial-author">Andy Colin - Architect</span>
+								<p class="testimonial-description">Thank you for all your good work in creating theme. They have a 'presence' which feels right.</p>
+							</div>
+						</div>
+						<div class="testimonial">
+							<div class="testimonial-content">
+								<span class="testimonial-author">Thomas Teddy - Design Writer</span>
+								<p class="testimonial-description">I love the logo. Particularly how the mark can stand on its own. Nice work! It feels tall and proud and powerful — and I love that. That's what I was after.</p>
+							</div>
+						</div>
+						<div class="testimonial">
+							<div class="testimonial-content">
+								<span class="testimonial-author">John Willy - Developer</span>
+								<p class="testimonial-description">You're pretty awesome to work with. Incredibly organized, easy to communicate with, responsive with next iterations, and beautiful work.</p>
+							</div>
+						</div>
+					</div> <!-- /.bxslider -->
+				</div> <!-- /.col-md-12 -->
+			</div> <!-- /.row -->
+		</div> <!-- /.container -->
+	</section> <!-- /.testimonials-widget -->
+
+	
+	
+	<section id="blogPosts" class="parallax">
+	    <div class="parallax-overlay">
+		    <div class="container">
+		        <div class="row">
+		        	<div class="col-md-12">
+		        		<div class="section-header">
+							<h2 class="section-title">Recent Posts</h2>
+							
+						</div> <!-- /.section-header -->
+		        	</div> <!-- /.col-md-12 -->
+		        </div> <!-- /.row -->
+		        <div class="row latest-posts">
+                    {% for post in recent_post%}
+		        	<div class="col-md-4 col-sm-6">
+		        		<div class="blog-post clearfix">
+		        			<div class="thumb-post">
+		        				<a href="{% url 'post_detail_page' post.sno_post%}"><img src="{{post.img.url}}" alt="" class="img-circle"></a>
+		        			</div>
+		        			<div class="blog-post-content">
+		        				<h4 class="post-title"><a href="{% url 'post_detail_page' post.sno_post%}">{{post.title| slice:"50" | safe }}</a></h4>
+		        				<span class="meta-post-date">{{post.date}}</span>
+		        			</div>
+		        		</div> <!-- /.blog-post -->
+		        	</div> <!-- /.col-md-4 -->
+                    {%endfor%}
+		        	
+		        </div> <!-- /.row -->
+		    </div> <!-- /.container -->
+	    </div> <!-- /.parallax-overlay -->
+	</section> <!-- /#blogPosts -->
+
+    <!-- skills section start -->
+    <section class="skills" id="skills">
+        <div class="max-width">
+            <h2 class="title">My Skills</h2>
+            <div class="skills-content">
+            {%for skill in my_skill%}
+                <div class="column left">
+                    <div class="text">{{skill.title}}</div>
+                    <p>{{skill.desc|safe}}</p>
+                    
+                </div>
+                {% endfor %}
+                <div class="column right">
+                    <div class="bars">
+                        <div class="info">
+                            <span>Python</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="line html"></div>
+                    </div>
+                    <div class="bars">
+                        <div class="info">
+                            <span>C/C++</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="line js"></div>
+                    </div>
+                    <div class="bars">
+                        <div class="info">
+                            <span>Java</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="line js"></div>
+                    </div>
+                    <div class="bars">
+                        <div class="info">
+                            <span>JavaScript</span>
+                            <span>60%</span>
+                        </div>
+                        <div class="line php"></div>
+                    </div>
+                    <div class="bars">
+                        <div class="info">
+                            <span>CSS</span>
+                            <span>70%</span>
+                        </div>
+                        <div class="line mysql"></div>
+                    </div>
+                    <div class="bars">
+                        <div class="info">
+                            <span>Automation Testing</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="line js"></div>
+                    </div>
+                    <div class="bars">
+                        <div class="info">
+                            <span>HTML</span>
+                            <span>70%</span>
+                        </div>
+                        <div class="line mysql"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   {% endblock body %}

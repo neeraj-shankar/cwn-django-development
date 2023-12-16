@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+:root {
+    --bg-color: purple;
+    --font-1: 'Poppins', sans-serif;
+    --font-2: 'Roboto', sans-serif;
+}
+
+.gt-max-width-1 {
+    width: 98vw;
+}
+.gt-max-width-3 {
+    max-width: 80vw;
+}
+
+
+.gt-max-width-2 {
+    max-width: 70vw;
+}
+
+.gt-m-auto {
+    margin: auto;
+}
+
+.gt-article-right {
+    margin: 0px 18px;
+}
+
+.gt-my-2 {
+    margin-top: 12px;
+    margin-bottom: 12px;
+}

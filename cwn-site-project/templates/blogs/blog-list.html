@@ -1,0 +1,109 @@
+{% extends 'base/index.html' %}
+
+{% load static %}
+
+{% block body%}
+	<div class="container">	
+		<div class="row">
+
+			<div class="col-md-8 blog-posts">
+				<div class="row">
+					<div class="col-md-12">
+						{% for post in post_list%}
+						<div class="post-blog">
+							<div class="blog-image">
+								<a href="#">
+									<img src="{{post.post_image.url}}" alt="">
+								</a>
+							</div> <!-- /.blog-image -->
+							<div class="blog-content">
+								<span class="meta-date"><a href="#">{{post.date}}</a></span>
+								<span class="meta-comments"><a href="#">{{post.category}}</a></span>
+								<span class="meta-author"><a href="#">{{post.author}}</a></span>
+								<h3><a href="{% url 'post_detail_page' post.id %}">{{post.title}}</a></h3>
+								<p class="light-text">{{post.desc}}</p>
+								<p>{{post.desc}}<a href="{% url 'post_detail_page' post.id %}">Continue Reading...</a></p>
+							</div> <!-- /.blog-content -->
+						</div> <!-- /.post-blog -->
+						{% endfor %}
+						
+					</div> <!-- /.col-md-12 -->
+					<div class="col-md-12">
+						<ul class="pages">
+							<li><a href="#" class="active">1</a></li>
+							<li><a href="#">2</a></li>
+							<li><a href="#">3</a></li>
+							<li><a href="#">...</a></li>
+							<li><a href="#">13</a></li>
+						</ul>
+					</div> <!-- /.col-md-12 -->
+				</div> <!-- /.row -->
+			</div> <!-- /.col-md-8 -->
+
+			<div class="col-md-4">
+				<div class="sidebar">
+					<div class="sidebar-widget">
+						<h5 class="widget-title">Recent Posts</h5>
+						<div class="last-post clearfix">
+							<div class="thumb pull-left">
+								<a href="#"><img src="images/includes/blogthumb1.jpg" alt=""></a>
+							</div>
+							<div class="content">
+								<span>24 February 2084</span>
+								<h4><a href="#">Standard Post Formating Medigo</a></h4>
+							</div>
+						</div> <!-- /.last-post -->
+						<div class="last-post clearfix">
+							<div class="thumb pull-left">
+								<a href="#"><img src="images/includes/blogthumb2.jpg" alt=""></a>
+							</div>
+							<div class="content">
+								<span>24 February 2084</span>
+								<h4><a href="#">Standard Post Formating Medigo</a></h4>
+							</div>
+						</div> <!-- /.last-post -->
+						<div class="last-post clearfix">
+							<div class="thumb pull-left">
+								<a href="#"><img src="images/includes/blogthumb3.jpg" alt=""></a>
+							</div>
+							<div class="content">
+								<span>24 February 2084</span>
+								<h4><a href="#">Standard Post Formating Medigo</a></h4>
+							</div>
+						</div> <!-- /.last-post -->
+					</div> <!-- /.sidebar-widget -->
+					<div class="sidebar-widget">
+						<h5 class="widget-title">Categories</h5>
+						<div class="row categories">
+							<div class="col-md-6">
+								<ul>
+									<li><a href="#">Standard</a></li>
+									<li><a href="#">Audio</a></li>
+									<li><a href="#">Video</a></li>
+									<li><a href="#">Branding</a></li>
+								</ul>
+							</div>
+							<div class="col-md-6">
+								<ul>
+									<li><a href="#">iOS Design</a></li>
+									<li><a href="#">Business</a></li>
+								</ul>
+							</div>
+						</div> <!-- /.row -->
+					</div> <!-- /.sidebar-widget -->
+					<div class="sidebar-widget">
+						<h5 class="widget-title">Flickr Feed</h5>
+						<ul id="flickr-feed" class="thumbs"></ul>
+					</div> <!-- /.sidebar-widget -->
+					<div class="sidebar-widget">
+						<h5 class="widget-title">Text Widget</h5>
+						<p class="light-text">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Cum sociis natoque penatibus et magnis dis parturient… </p>
+					</div> <!-- /.sidebar-widget -->
+				</div> <!-- /.sidebar -->
+			</div> <!-- /.col-md-4 -->
+
+		</div> <!-- /.row -->
+	</div> <!-- /.container -->	
+
+
+{% endblock%}

@@ -1,0 +1,39 @@
+{% block comments %}
+<form action="" method="POST">
+                                {% csrf_token %}
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <p>
+                                            <label for="name-id">Your Name:</label>
+                                            <input type="text" id="name" name="name">
+                                        </p>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <p>
+                                            <label for="email-id">Email Address:</label>
+                                            <input type="text" id="email" name="email">
+                                        </p>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <p>
+                                            
+                                            <input type="hidden" name="postSno" value="{{post.sno_post}}">
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <p>
+                                            <label for="comment">Your comment:</label>
+                                            <textarea name="comment" id="comment" rows="5"></textarea>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <input class="mainBtn" type="submit" name="submit" value="Submit Comment" id="sendMessageButton">
+                                    </div>
+                                </div>
+                                </form>
+
+{% endblock comments %}
