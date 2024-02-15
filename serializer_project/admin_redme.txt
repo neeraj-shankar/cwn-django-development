@@ -1,0 +1,36 @@
+class ModelAdmin
+-----------------------------------------------------------------------------------------------------------------------
+The ModelAdmin class is the representation of a model in the admin interface.
+
+Example
+-----------------------------------------------------------------------------------------
+from django.contrib import admin
+from myapp.models import Author
+
+
+class AuthorAdmin(admin.ModelAdmin):
+    pass
+
+
+admin.site.register(Author, AuthorAdmin)
+-----------------------------------------------------------------------------------------
+
+The register decorator
+-----------------------------------------------------------------------------------------------------------------------
+Syntax: register(*models, site=django.contrib.admin.sites.site)
+-----------------------------------------------------------------------------------------------------------------------
+Example:
+-----------------------------------------------------------------------------------------
+from django.contrib import admin
+from .models import Author
+
+
+@admin.register(Author)
+class AuthorAdmin(admin.ModelAdmin):
+    pass
+-----------------------------------------------------------------------------------------
+
+Option in admin.register decorator
+-----------------------------------------------------------------------------------------
+
+
