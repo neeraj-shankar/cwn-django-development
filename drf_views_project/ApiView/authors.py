@@ -33,9 +33,11 @@ class AuthorDetail(APIView):
 
     def get_author(self, pk):
         try:
-            Author.objects.get(pk=pk)
+            author = Author.objects.get(pk=pk)
         except Author.DoesNotExist:
             raise Http404
+        
+        return author
 
     def get(self, request, pk):
         author = self.get_author(pk)

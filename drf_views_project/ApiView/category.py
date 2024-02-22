@@ -92,7 +92,8 @@ class CategoryDetail(APIView):
 
     def get_object(self, pk):
         try:
-            Category.objects.get(pk=pk)
+            category = Category.objects.get(pk=pk)
+            return category
         except Category.DoesNotExist:
             raise Response(
                 {"error": "Post not found"}, status=status.HTTP_404_NOT_FOUND
